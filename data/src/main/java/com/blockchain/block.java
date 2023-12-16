@@ -45,8 +45,10 @@ class Blockchain{
   
   // adds a new block to the chain
   public void addBlock(Block newBlock){
+    
     newBlock.previousHash = getLatestBlock().hash;
     newBlock.hash = newBlock.calculateHash();
+    
     chain.add(newBlock);
   }
   
